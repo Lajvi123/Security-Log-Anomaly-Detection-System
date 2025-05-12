@@ -25,10 +25,8 @@ I have built this project in 3 seperate code files.
 
 **2. Simulating Real-Time Streaming (log_streamer.ipynb)**
 
-To emulate real-time log ingestion a custom script was developed in log_streamer.ipynb.
-What it does:
-      *  Reads logs from the cleaned prediction file row-by-row, simulating incoming network events.
-      *  Streams entries in a structured JSON log format
+* It Reads logs from the cleaned prediction file row-by-row, simulating incoming network events.
+* It streams entries in a structured JSON log format.
 
 **3. Anomaly Detection Using Isolation Forest (anomaly_detection.ipynb)**
 
