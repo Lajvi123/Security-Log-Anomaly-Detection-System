@@ -34,5 +34,19 @@ I have built this project in 3 seperate code files.
 * Split the cleaned dataset into training (80%) and testing (20%) sets. Trained an Isolation Forest model (n_estimators=100, contamination=0.1) using only the training data.
 * Predicted anomaly scores on the test set.
       * Model output of -1 was interpreted as an anomaly and mapped to label 1
-      * Output of 1 was mapped to normal, label 0
+      * Output of 1 was mapped to normal, label 0.
+
+## Results & Analysis
+The anomaly detection model was evaluated on a test set of 140,001 network log entries using synthetic labels (0 = normal, 1 = anomaly). 
+
+1. Overall training and testing accuracy are 82.04% and 81.87% respectively.
+
+| Metric | Normal (0) | Anomaly(1) |
+| ------------- | ------------- | ------------- |
+| Precision  | 0.90  |      0.09        |
+| Recall  | 0.90  |        0.09       |
+|F1 Score|    0.90                |      0.09         |
+|Support|         126,021 |	13,980     |
+
+
   
