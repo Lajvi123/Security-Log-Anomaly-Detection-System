@@ -17,21 +17,20 @@ I have used [UNSW-NB15 dataset](https://research.unsw.edu.au/projects/unsw-nb15-
 
 I have built this project in 3 seperate code files. 
 
-1. Data Preprocessing (preprocessing.ipynb)
+**1. Data Preprocessing (preprocessing.ipynb)**
 
 *  Handled missing values and inconsistent types. Created a clean version of the dataset ready for modeling.
 *  Created a clean label column by replacing missing label values (NaN) with randomly assigned 0 (normal) or 1 (anomaly), since ground truth labels were missing.
 *  Added a synthetic log_id column to uniquely identify and sequence logs for visualization purposes.
 
-2. Simulating Real-Time Streaming (log_streamer.ipynb)
+**2. Simulating Real-Time Streaming (log_streamer.ipynb)**
 
 To emulate real-time log ingestion a custom script was developed in log_streamer.ipynb.
 What it does:
+      *  Reads logs from the cleaned prediction file row-by-row, simulating incoming network events.
+      *  Streams entries in a structured JSON log format
 
-      * Reads logs from the cleaned prediction file row-by-row, simulating incoming network events.
-      * Streams entries in a structured JSON log format
-
-3. Anomaly Detection Using Isolation Forest (anomaly_detection.ipynb)
+**3. Anomaly Detection Using Isolation Forest (anomaly_detection.ipynb)**
 
 * The anomaly detection task was framed as an unsupervised outlier detection problem using the Isolation Forest algorithm, well-suited for high-dimensional and large-scale log data.
 * Split the cleaned dataset into training (80%) and testing (20%) sets. Trained an Isolation Forest model (n_estimators=100, contamination=0.1) using only the training data.
