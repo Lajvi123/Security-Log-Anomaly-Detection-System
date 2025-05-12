@@ -34,6 +34,7 @@ I have built this project in 3 seperate code files.
 * Split the cleaned dataset into training (80%) and testing (20%) sets. Trained an Isolation Forest model (n_estimators=100, contamination=0.1) using only the training data.
 * Predicted anomaly scores on the test set.
       * Model output of -1 was interpreted as an anomaly and mapped to label 1
+  
       * Output of 1 was mapped to normal, label 0.
 
 ## Results & Analysis
