@@ -48,5 +48,9 @@ The anomaly detection model was evaluated on a test set of 140,001 network log e
 |F1 Score|    0.90                |      0.09         |
 |Support|         126,021 |	13,980     |
 
+2. Confusion Metrix :
+
+<img width="497" alt="Screenshot 2025-05-12 at 2 50 21 PM" src="https://github.com/user-attachments/assets/1c496bec-ee54-4a83-94a8-9ba85ec4f053" />
+
 
   
